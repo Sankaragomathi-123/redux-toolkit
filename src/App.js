@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import CarForm from "./component/CarForm";
+import CarList from "./component/CarList";
+import CarSearch from "./component/CarSearch";
+import CarValue from "./component/CarValue";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        padding: "2rem",
+        width: "60%",
+        margin: "auto",
+      }}>
+      <CarForm />
+      <div
+        style={{
+          boxShadow: "0px 3px 20px #00000021",
+        }}>
+        <br />
+        <CarSearch />
+        <br />
+        <CarList />
+        <br />
+        <CarValue />
+      </div>
     </div>
   );
 }
